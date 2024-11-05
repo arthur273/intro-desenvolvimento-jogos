@@ -39,6 +39,7 @@
 		#include <SDL2/SDL_image.h>
 	#elif __linux__
 		#include <SDL2/SDL_image.h>
+
 	#else
 		#error "Unknown compiler"
 	#endif

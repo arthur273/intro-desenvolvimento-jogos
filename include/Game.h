@@ -8,25 +8,45 @@
 #include <string>
 #include "State.h"
 
+#include <stack>  // For managing a stack of states
+#include <memory> // For smart pointers
+
+using namespace std;
+
 class Game {
 public:
-    static Game& GetInstance(const std::string& title = "Jogo", int width = 800, int height = 600);
+    static Game& GetInstance(const string& title = "Jogo", int width = 1200, int height = 900);
     void Run();
-    State* GetState();
+    
+    // Stack management functions
+    void PushState(State* state);
+
+    void PopState();
+    State& GetCurrentState();
+
     SDL_Renderer* GetRenderer();
     SDL_Window* GetWindow();
 
     ~Game();
 
 private:
-    Game(const std::string& title, int width, int height);  // Construtor privado
+    Game(const string& title, int width, int height);  // Construtor privado
     void INIT_SDL();
     void SHUTDOWN_SDL();  
+
+
+    stack<State*> stateStack; // Stack to manage multiple states
 
     SDL_Window* window;         
     SDL_Renderer* renderer;
     State* state;    
     static Game* instance;      
+
+
+
+    // Member variables
+    int width; // Add width as a member variable
+    int height; // Add height as a member variable
 };
 
 #endif // GAME_H
