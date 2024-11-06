@@ -10,13 +10,13 @@ State::State() : quitRequested(false) {
 // Loads the assets needed for this state
 void State::LoadAssets() {
     // Load the background sprite and music
-    bg = Sprite("recursos/Background.png");
+    bg.Open("recursos/Background.png");
     bg.SetClip(0, 0, 1200, 900); 
     if (!bg.IsOpen()) {
     cerr << "Background sprite not loaded!" << endl;
     }
 
-    music = Music("recursos/PumpAction.mp3");
+    music.Open("recursos/BGM.wav");
     if (music.IsOpen()) {
        SDL_Log("Musica carregada");
        music.Play(-1); // Play the music if it's loaded correctly
