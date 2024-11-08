@@ -1,5 +1,7 @@
 // Game.cpp
 #include "Game.h"
+#include "State.h"
+#include "MenuState.h"
 
 #define INCLUDE_SDL_IMAGE
 #define INCLUDE_SDL_MIXER
@@ -13,7 +15,7 @@ Game* Game::instance = nullptr;  // Define a instância única
 Game& Game::GetInstance(const std::string& title, int width, int height) {
     if (instance == nullptr) {
         instance = new Game(title, width, height);
-        State* initialState = new State();
+        State* initialState = new MenuState();
         instance->PushState(initialState);
         SDL_Log("Game Instance Created");
     }

@@ -9,8 +9,9 @@ Sprite::Sprite() : texture(nullptr), width(0), height(0), isOpen(false) {
     clipRect = {0, 0, 0, 0}; // Initialize the clipping rectangle
 }
 
-Sprite::Sprite(const std::string& file) : Sprite() { // Delegate to the default constructor
-    Open(file);
+Sprite::Sprite(const std::string& file, int frameCountW, int frameCountH) 
+    : texture(nullptr), frameCountW(frameCountW), frameCountH(frameCountH), currentFrame(0) {
+    Open(file, frameCountW, frameCountH);
 }
 
 Sprite::~Sprite() {
@@ -20,8 +21,9 @@ Sprite::~Sprite() {
 }
 
 
-void Sprite::Open(const std::string& file) {
+void Sprite::Open(const std::string& file, int frameCountW, int frameCountH) {
     SDL_Surface* surface = IMG_Load(file.c_str());
+    cerr << "About to load image in Sprite::Open!" << IMG_GetError() << endl;
     if (!surface) {
         // Handle error
         cerr << "Failed to load image: " << IMG_GetError() << endl;
@@ -34,6 +36,8 @@ void Sprite::Open(const std::string& file) {
     } else {
         if (SDL_QueryTexture(texture, NULL, NULL, &width, &height) == 0) {
             //width e height agora tem os valores certos
+            printf("Image is loaded \n!");
+            isOpen = true;
         } else {
         printf("SDL_QueryTexture Error: %s\n", SDL_GetError());
        }
@@ -44,12 +48,11 @@ void Sprite::SetClip(int x, int y, int w, int h) {
     clipRect = {x, y, w, h}; // Set the clipping rectangle
 }
 
-void Sprite::Render(int x, int y) {
+void Sprite::Render(int x, int y, int w, int h) {
+    SDL_Log("Sprite about to render!");
     if (texture) {
-        SDL_Rect destRect = {x, y, clipRect.w, clipRect.h}; // Create destination rectangle
-
-        SDL_Log("clipRect - x: %d, y: %d, w: %d, h: %d", clipRect.x, clipRect.y, clipRect.w, clipRect.h);
-        SDL_Log("destRect - x: %d, y: %d, w: %d, h: %d", destRect.x, destRect.y, destRect.w, destRect.h);
+        SDL_Rect destRect = {x, y, clipRect.w, clipRect.h}; // Create destination rectangle for bg
+        //SDL_Rect destRect = {x, y, w, h};
         SDL_RenderCopy(Game::GetInstance().GetRenderer(), texture, &clipRect, &destRect); // Render the texture
     } else {
         SDL_Log("Texture is null.");

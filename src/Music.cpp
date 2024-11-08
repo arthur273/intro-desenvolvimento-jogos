@@ -1,4 +1,7 @@
 #include "Music.h"
+#define INCLUDE_SDL_IMAGE
+#define INCLUDE_SDL_MIXER
+#include "SDL_include.h"
 
 Music::Music() : music(nullptr) {
     // Initialize SDL_mixer if needed
@@ -36,8 +39,13 @@ void Music::Stop(int msToStop) {
 }
 
 void Music::Open(const std::string& file) {
+    SDL_Log("%s", file.c_str());
+    Mix_FreeMusic(music);
+    //music = nullptr; 
     music = Mix_LoadMUS(file.c_str()); // Load music from file
+    SDL_Log("Should have loaded music");
     if (music == nullptr) {
         SDL_Log("Failed to load music! SDL_mixer Error: %s", Mix_GetError());
     }
+    SDL_Log("Not null ptr");
 }

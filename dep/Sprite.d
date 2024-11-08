@@ -255,14 +255,14 @@ dep/Sprite.d bin/Sprite.o: src/Sprite.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/bits/functional_hash.h \
  /usr/include/c++/13/bits/hash_bytes.h \
  /usr/include/c++/13/bits/basic_string.tcc include/Game.h include/State.h \
- include/Sprite.h include/Music.h /usr/include/c++/13/stack \
- /usr/include/c++/13/deque /usr/include/c++/13/bits/stl_uninitialized.h \
- /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
- /usr/include/c++/13/bits/stl_stack.h \
- /usr/include/c++/13/bits/uses_allocator.h /usr/include/c++/13/memory \
+ /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/bits/stl_vector.h \
+ /usr/include/c++/13/bits/stl_bvector.h \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/memory \
  /usr/include/c++/13/bits/stl_tempbuf.h \
  /usr/include/c++/13/bits/stl_raw_storage_iter.h \
  /usr/include/c++/13/bits/align.h /usr/include/c++/13/bit \
+ /usr/include/c++/13/bits/uses_allocator.h \
  /usr/include/c++/13/bits/unique_ptr.h /usr/include/c++/13/tuple \
  /usr/include/c++/13/bits/shared_ptr.h \
  /usr/include/c++/13/bits/shared_ptr_base.h /usr/include/c++/13/typeinfo \
@@ -291,7 +291,11 @@ dep/Sprite.d bin/Sprite.o: src/Sprite.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/bits/shared_ptr_atomic.h \
  /usr/include/c++/13/bits/atomic_base.h \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
- /usr/include/c++/13/backward/auto_ptr.h /usr/include/c++/13/stdexcept \
+ /usr/include/c++/13/backward/auto_ptr.h include/Sprite.h include/Music.h \
+ include/GameObject.h include/Rect.h include/Component.h \
+ /usr/include/c++/13/stack /usr/include/c++/13/deque \
+ /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
+ /usr/include/c++/13/bits/stl_stack.h /usr/include/c++/13/stdexcept \
  /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
  /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \
  /usr/include/c++/13/bits/locale_classes.h \
@@ -622,20 +626,17 @@ include/SDL_include.h:
 /usr/include/c++/13/bits/basic_string.tcc:
 include/Game.h:
 include/State.h:
-include/Sprite.h:
-include/Music.h:
-/usr/include/c++/13/stack:
-/usr/include/c++/13/deque:
+/usr/include/c++/13/vector:
 /usr/include/c++/13/bits/stl_uninitialized.h:
-/usr/include/c++/13/bits/stl_deque.h:
-/usr/include/c++/13/bits/deque.tcc:
-/usr/include/c++/13/bits/stl_stack.h:
-/usr/include/c++/13/bits/uses_allocator.h:
+/usr/include/c++/13/bits/stl_vector.h:
+/usr/include/c++/13/bits/stl_bvector.h:
+/usr/include/c++/13/bits/vector.tcc:
 /usr/include/c++/13/memory:
 /usr/include/c++/13/bits/stl_tempbuf.h:
 /usr/include/c++/13/bits/stl_raw_storage_iter.h:
 /usr/include/c++/13/bits/align.h:
 /usr/include/c++/13/bit:
+/usr/include/c++/13/bits/uses_allocator.h:
 /usr/include/c++/13/bits/unique_ptr.h:
 /usr/include/c++/13/tuple:
 /usr/include/c++/13/bits/shared_ptr.h:
@@ -670,6 +671,16 @@ include/Music.h:
 /usr/include/c++/13/bits/atomic_base.h:
 /usr/include/c++/13/bits/atomic_lockfree_defines.h:
 /usr/include/c++/13/backward/auto_ptr.h:
+include/Sprite.h:
+include/Music.h:
+include/GameObject.h:
+include/Rect.h:
+include/Component.h:
+/usr/include/c++/13/stack:
+/usr/include/c++/13/deque:
+/usr/include/c++/13/bits/stl_deque.h:
+/usr/include/c++/13/bits/deque.tcc:
+/usr/include/c++/13/bits/stl_stack.h:
 /usr/include/c++/13/stdexcept:
 /usr/include/c++/13/iostream:
 /usr/include/c++/13/ostream:

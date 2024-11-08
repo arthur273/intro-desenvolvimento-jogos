@@ -11,6 +11,7 @@
 #include <stack>  // For managing a stack of states
 #include <memory> // For smart pointers
 
+
 using namespace std;
 
 class Game {
@@ -26,6 +27,10 @@ public:
 
     SDL_Renderer* GetRenderer();
     SDL_Window* GetWindow();
+
+    // New functions
+    int GetWidth() const { return width; }
+    int GetHeight() const { return height; }
 
     ~Game();
 

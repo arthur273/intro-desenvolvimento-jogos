@@ -1,6 +1,5 @@
 dep/Music.d bin/Music.o: src/Music.cpp /usr/include/stdc-predef.h \
- include/Music.h include/SDL_include.h /usr/include/SDL2/SDL_image.h \
- /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
+ include/Music.h include/SDL_include.h /usr/include/SDL2/SDL_mixer.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
  /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/begin_code.h \
@@ -92,12 +91,60 @@ dep/Music.d bin/Music.o: src/Music.cpp /usr/include/stdc-predef.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h \
- /usr/include/SDL2/SDL_assert.h /usr/include/SDL2/SDL_atomic.h \
- /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/SDL_audio.h \
- /usr/include/SDL2/SDL_error.h /usr/include/SDL2/SDL_endian.h \
+ /usr/include/SDL2/SDL_rwops.h /usr/include/SDL2/SDL_error.h \
+ /usr/include/SDL2/SDL_audio.h /usr/include/SDL2/SDL_endian.h \
  /usr/include/SDL2/SDL_mutex.h /usr/include/SDL2/SDL_thread.h \
- /usr/include/SDL2/SDL_rwops.h /usr/include/SDL2/SDL_clipboard.h \
- /usr/include/SDL2/SDL_cpuinfo.h \
+ /usr/include/SDL2/SDL_atomic.h /usr/include/SDL2/SDL_platform.h \
+ /usr/include/SDL2/SDL_version.h /usr/include/c++/13/string \
+ /usr/include/c++/13/bits/stringfwd.h \
+ /usr/include/c++/13/bits/memoryfwd.h \
+ /usr/include/c++/13/bits/char_traits.h \
+ /usr/include/c++/13/bits/postypes.h /usr/include/c++/13/cwchar \
+ /usr/include/c++/13/type_traits /usr/include/c++/13/bits/allocator.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
+ /usr/include/c++/13/bits/new_allocator.h /usr/include/c++/13/new \
+ /usr/include/c++/13/bits/exception.h \
+ /usr/include/c++/13/bits/functexcept.h \
+ /usr/include/c++/13/bits/exception_defines.h \
+ /usr/include/c++/13/bits/move.h /usr/include/c++/13/bits/localefwd.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
+ /usr/include/c++/13/clocale /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/13/iosfwd \
+ /usr/include/c++/13/cctype /usr/include/c++/13/bits/ostream_insert.h \
+ /usr/include/c++/13/bits/cxxabi_forced.h \
+ /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/13/bits/concept_check.h \
+ /usr/include/c++/13/debug/assertions.h \
+ /usr/include/c++/13/bits/stl_iterator_base_types.h \
+ /usr/include/c++/13/bits/stl_iterator.h \
+ /usr/include/c++/13/bits/ptr_traits.h \
+ /usr/include/c++/13/bits/stl_function.h \
+ /usr/include/c++/13/backward/binders.h \
+ /usr/include/c++/13/ext/numeric_traits.h \
+ /usr/include/c++/13/bits/stl_algobase.h \
+ /usr/include/c++/13/bits/stl_pair.h /usr/include/c++/13/bits/utility.h \
+ /usr/include/c++/13/debug/debug.h \
+ /usr/include/c++/13/bits/predefined_ops.h \
+ /usr/include/c++/13/bits/refwrap.h /usr/include/c++/13/bits/invoke.h \
+ /usr/include/c++/13/bits/range_access.h \
+ /usr/include/c++/13/initializer_list \
+ /usr/include/c++/13/bits/basic_string.h \
+ /usr/include/c++/13/ext/alloc_traits.h \
+ /usr/include/c++/13/bits/alloc_traits.h \
+ /usr/include/c++/13/bits/stl_construct.h \
+ /usr/include/c++/13/ext/string_conversions.h /usr/include/c++/13/cstdio \
+ /usr/include/c++/13/cerrno /usr/include/errno.h \
+ /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
+ /usr/include/x86_64-linux-gnu/asm/errno.h \
+ /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
+ /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
+ /usr/include/c++/13/bits/charconv.h \
+ /usr/include/c++/13/bits/functional_hash.h \
+ /usr/include/c++/13/bits/hash_bytes.h \
+ /usr/include/c++/13/bits/basic_string.tcc include/SDL_include.h \
+ /usr/include/SDL2/SDL_image.h /usr/include/SDL2/SDL.h \
+ /usr/include/SDL2/SDL_main.h /usr/include/SDL2/SDL_assert.h \
+ /usr/include/SDL2/SDL_clipboard.h /usr/include/SDL2/SDL_cpuinfo.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/x86gprintrin.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/ia32intrin.h \
@@ -207,60 +254,11 @@ dep/Music.d bin/Music.o: src/Music.cpp /usr/include/stdc-predef.h \
  /usr/include/SDL2/SDL_metal.h /usr/include/SDL2/SDL_power.h \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
- /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h /usr/include/SDL2/SDL_mixer.h \
- /usr/include/c++/13/string /usr/include/c++/13/bits/stringfwd.h \
- /usr/include/c++/13/bits/memoryfwd.h \
- /usr/include/c++/13/bits/char_traits.h \
- /usr/include/c++/13/bits/postypes.h /usr/include/c++/13/cwchar \
- /usr/include/c++/13/type_traits /usr/include/c++/13/bits/allocator.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
- /usr/include/c++/13/bits/new_allocator.h /usr/include/c++/13/new \
- /usr/include/c++/13/bits/exception.h \
- /usr/include/c++/13/bits/functexcept.h \
- /usr/include/c++/13/bits/exception_defines.h \
- /usr/include/c++/13/bits/move.h /usr/include/c++/13/bits/localefwd.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h \
- /usr/include/c++/13/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/13/iosfwd \
- /usr/include/c++/13/cctype /usr/include/c++/13/bits/ostream_insert.h \
- /usr/include/c++/13/bits/cxxabi_forced.h \
- /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/13/bits/concept_check.h \
- /usr/include/c++/13/debug/assertions.h \
- /usr/include/c++/13/bits/stl_iterator_base_types.h \
- /usr/include/c++/13/bits/stl_iterator.h \
- /usr/include/c++/13/bits/ptr_traits.h \
- /usr/include/c++/13/bits/stl_function.h \
- /usr/include/c++/13/backward/binders.h \
- /usr/include/c++/13/ext/numeric_traits.h \
- /usr/include/c++/13/bits/stl_algobase.h \
- /usr/include/c++/13/bits/stl_pair.h /usr/include/c++/13/bits/utility.h \
- /usr/include/c++/13/debug/debug.h \
- /usr/include/c++/13/bits/predefined_ops.h \
- /usr/include/c++/13/bits/refwrap.h /usr/include/c++/13/bits/invoke.h \
- /usr/include/c++/13/bits/range_access.h \
- /usr/include/c++/13/initializer_list \
- /usr/include/c++/13/bits/basic_string.h \
- /usr/include/c++/13/ext/alloc_traits.h \
- /usr/include/c++/13/bits/alloc_traits.h \
- /usr/include/c++/13/bits/stl_construct.h \
- /usr/include/c++/13/ext/string_conversions.h /usr/include/c++/13/cstdio \
- /usr/include/c++/13/cerrno /usr/include/errno.h \
- /usr/include/x86_64-linux-gnu/bits/errno.h /usr/include/linux/errno.h \
- /usr/include/x86_64-linux-gnu/asm/errno.h \
- /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
- /usr/include/x86_64-linux-gnu/bits/types/error_t.h \
- /usr/include/c++/13/bits/charconv.h \
- /usr/include/c++/13/bits/functional_hash.h \
- /usr/include/c++/13/bits/hash_bytes.h \
- /usr/include/c++/13/bits/basic_string.tcc
+ /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h
 /usr/include/stdc-predef.h:
 include/Music.h:
 include/SDL_include.h:
-/usr/include/SDL2/SDL_image.h:
-/usr/include/SDL2/SDL.h:
-/usr/include/SDL2/SDL_main.h:
+/usr/include/SDL2/SDL_mixer.h:
 /usr/include/SDL2/SDL_stdinc.h:
 /usr/include/SDL2/SDL_config.h:
 /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h:
@@ -367,15 +365,80 @@ include/SDL_include.h:
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
 /usr/lib/gcc/x86_64-linux-gnu/13/include/float.h:
-/usr/include/SDL2/SDL_assert.h:
-/usr/include/SDL2/SDL_atomic.h:
-/usr/include/SDL2/SDL_platform.h:
-/usr/include/SDL2/SDL_audio.h:
+/usr/include/SDL2/SDL_rwops.h:
 /usr/include/SDL2/SDL_error.h:
+/usr/include/SDL2/SDL_audio.h:
 /usr/include/SDL2/SDL_endian.h:
 /usr/include/SDL2/SDL_mutex.h:
 /usr/include/SDL2/SDL_thread.h:
-/usr/include/SDL2/SDL_rwops.h:
+/usr/include/SDL2/SDL_atomic.h:
+/usr/include/SDL2/SDL_platform.h:
+/usr/include/SDL2/SDL_version.h:
+/usr/include/c++/13/string:
+/usr/include/c++/13/bits/stringfwd.h:
+/usr/include/c++/13/bits/memoryfwd.h:
+/usr/include/c++/13/bits/char_traits.h:
+/usr/include/c++/13/bits/postypes.h:
+/usr/include/c++/13/cwchar:
+/usr/include/c++/13/type_traits:
+/usr/include/c++/13/bits/allocator.h:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
+/usr/include/c++/13/bits/new_allocator.h:
+/usr/include/c++/13/new:
+/usr/include/c++/13/bits/exception.h:
+/usr/include/c++/13/bits/functexcept.h:
+/usr/include/c++/13/bits/exception_defines.h:
+/usr/include/c++/13/bits/move.h:
+/usr/include/c++/13/bits/localefwd.h:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
+/usr/include/c++/13/clocale:
+/usr/include/locale.h:
+/usr/include/x86_64-linux-gnu/bits/locale.h:
+/usr/include/c++/13/iosfwd:
+/usr/include/c++/13/cctype:
+/usr/include/c++/13/bits/ostream_insert.h:
+/usr/include/c++/13/bits/cxxabi_forced.h:
+/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+/usr/include/c++/13/bits/concept_check.h:
+/usr/include/c++/13/debug/assertions.h:
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
+/usr/include/c++/13/bits/stl_iterator.h:
+/usr/include/c++/13/bits/ptr_traits.h:
+/usr/include/c++/13/bits/stl_function.h:
+/usr/include/c++/13/backward/binders.h:
+/usr/include/c++/13/ext/numeric_traits.h:
+/usr/include/c++/13/bits/stl_algobase.h:
+/usr/include/c++/13/bits/stl_pair.h:
+/usr/include/c++/13/bits/utility.h:
+/usr/include/c++/13/debug/debug.h:
+/usr/include/c++/13/bits/predefined_ops.h:
+/usr/include/c++/13/bits/refwrap.h:
+/usr/include/c++/13/bits/invoke.h:
+/usr/include/c++/13/bits/range_access.h:
+/usr/include/c++/13/initializer_list:
+/usr/include/c++/13/bits/basic_string.h:
+/usr/include/c++/13/ext/alloc_traits.h:
+/usr/include/c++/13/bits/alloc_traits.h:
+/usr/include/c++/13/bits/stl_construct.h:
+/usr/include/c++/13/ext/string_conversions.h:
+/usr/include/c++/13/cstdio:
+/usr/include/c++/13/cerrno:
+/usr/include/errno.h:
+/usr/include/x86_64-linux-gnu/bits/errno.h:
+/usr/include/linux/errno.h:
+/usr/include/x86_64-linux-gnu/asm/errno.h:
+/usr/include/asm-generic/errno.h:
+/usr/include/asm-generic/errno-base.h:
+/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+/usr/include/c++/13/bits/charconv.h:
+/usr/include/c++/13/bits/functional_hash.h:
+/usr/include/c++/13/bits/hash_bytes.h:
+/usr/include/c++/13/bits/basic_string.tcc:
+include/SDL_include.h:
+/usr/include/SDL2/SDL_image.h:
+/usr/include/SDL2/SDL.h:
+/usr/include/SDL2/SDL_main.h:
+/usr/include/SDL2/SDL_assert.h:
 /usr/include/SDL2/SDL_clipboard.h:
 /usr/include/SDL2/SDL_cpuinfo.h:
 /usr/lib/gcc/x86_64-linux-gnu/13/include/immintrin.h:
@@ -502,67 +565,5 @@ include/SDL_include.h:
 /usr/include/SDL2/SDL_shape.h:
 /usr/include/SDL2/SDL_system.h:
 /usr/include/SDL2/SDL_timer.h:
-/usr/include/SDL2/SDL_version.h:
 /usr/include/SDL2/SDL_locale.h:
 /usr/include/SDL2/SDL_misc.h:
-/usr/include/SDL2/SDL_mixer.h:
-/usr/include/c++/13/string:
-/usr/include/c++/13/bits/stringfwd.h:
-/usr/include/c++/13/bits/memoryfwd.h:
-/usr/include/c++/13/bits/char_traits.h:
-/usr/include/c++/13/bits/postypes.h:
-/usr/include/c++/13/cwchar:
-/usr/include/c++/13/type_traits:
-/usr/include/c++/13/bits/allocator.h:
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h:
-/usr/include/c++/13/bits/new_allocator.h:
-/usr/include/c++/13/new:
-/usr/include/c++/13/bits/exception.h:
-/usr/include/c++/13/bits/functexcept.h:
-/usr/include/c++/13/bits/exception_defines.h:
-/usr/include/c++/13/bits/move.h:
-/usr/include/c++/13/bits/localefwd.h:
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
-/usr/include/c++/13/clocale:
-/usr/include/locale.h:
-/usr/include/x86_64-linux-gnu/bits/locale.h:
-/usr/include/c++/13/iosfwd:
-/usr/include/c++/13/cctype:
-/usr/include/c++/13/bits/ostream_insert.h:
-/usr/include/c++/13/bits/cxxabi_forced.h:
-/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
-/usr/include/c++/13/bits/concept_check.h:
-/usr/include/c++/13/debug/assertions.h:
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
-/usr/include/c++/13/bits/stl_iterator.h:
-/usr/include/c++/13/bits/ptr_traits.h:
-/usr/include/c++/13/bits/stl_function.h:
-/usr/include/c++/13/backward/binders.h:
-/usr/include/c++/13/ext/numeric_traits.h:
-/usr/include/c++/13/bits/stl_algobase.h:
-/usr/include/c++/13/bits/stl_pair.h:
-/usr/include/c++/13/bits/utility.h:
-/usr/include/c++/13/debug/debug.h:
-/usr/include/c++/13/bits/predefined_ops.h:
-/usr/include/c++/13/bits/refwrap.h:
-/usr/include/c++/13/bits/invoke.h:
-/usr/include/c++/13/bits/range_access.h:
-/usr/include/c++/13/initializer_list:
-/usr/include/c++/13/bits/basic_string.h:
-/usr/include/c++/13/ext/alloc_traits.h:
-/usr/include/c++/13/bits/alloc_traits.h:
-/usr/include/c++/13/bits/stl_construct.h:
-/usr/include/c++/13/ext/string_conversions.h:
-/usr/include/c++/13/cstdio:
-/usr/include/c++/13/cerrno:
-/usr/include/errno.h:
-/usr/include/x86_64-linux-gnu/bits/errno.h:
-/usr/include/linux/errno.h:
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-/usr/include/asm-generic/errno.h:
-/usr/include/asm-generic/errno-base.h:
-/usr/include/x86_64-linux-gnu/bits/types/error_t.h:
-/usr/include/c++/13/bits/charconv.h:
-/usr/include/c++/13/bits/functional_hash.h:
-/usr/include/c++/13/bits/hash_bytes.h:
-/usr/include/c++/13/bits/basic_string.tcc:

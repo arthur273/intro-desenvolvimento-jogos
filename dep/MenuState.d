@@ -1,5 +1,6 @@
-dep/State.d bin/State.o: src/State.cpp /usr/include/stdc-predef.h \
- include/State.h include/SDL_include.h /usr/include/SDL2/SDL_image.h \
+dep/MenuState.d bin/MenuState.o: src/MenuState.cpp \
+ /usr/include/stdc-predef.h include/MenuState.h include/State.h \
+ include/SDL_include.h /usr/include/SDL2/SDL_image.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -292,9 +293,12 @@ dep/State.d bin/State.o: src/State.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/bits/atomic_base.h \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h include/Sprite.h include/Music.h \
- include/GameObject.h include/Rect.h include/Component.h \
- /usr/include/c++/13/iostream /usr/include/c++/13/ostream \
- /usr/include/c++/13/ios /usr/include/c++/13/bits/ios_base.h \
+ include/GameObject.h include/Rect.h include/Component.h include/Game.h \
+ /usr/include/c++/13/stack /usr/include/c++/13/deque \
+ /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
+ /usr/include/c++/13/bits/stl_stack.h /usr/include/c++/13/iostream \
+ /usr/include/c++/13/ostream /usr/include/c++/13/ios \
+ /usr/include/c++/13/bits/ios_base.h \
  /usr/include/c++/13/bits/locale_classes.h \
  /usr/include/c++/13/bits/locale_classes.tcc \
  /usr/include/c++/13/system_error \
@@ -310,11 +314,9 @@ dep/State.d bin/State.o: src/State.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/bits/locale_facets.tcc \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
- /usr/include/c++/13/bits/istream.tcc include/Game.h include/State.h \
- /usr/include/c++/13/stack /usr/include/c++/13/deque \
- /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
- /usr/include/c++/13/bits/stl_stack.h
+ /usr/include/c++/13/bits/istream.tcc
 /usr/include/stdc-predef.h:
+include/MenuState.h:
 include/State.h:
 include/SDL_include.h:
 /usr/include/SDL2/SDL_image.h:
@@ -675,6 +677,12 @@ include/Music.h:
 include/GameObject.h:
 include/Rect.h:
 include/Component.h:
+include/Game.h:
+/usr/include/c++/13/stack:
+/usr/include/c++/13/deque:
+/usr/include/c++/13/bits/stl_deque.h:
+/usr/include/c++/13/bits/deque.tcc:
+/usr/include/c++/13/bits/stl_stack.h:
 /usr/include/c++/13/iostream:
 /usr/include/c++/13/ostream:
 /usr/include/c++/13/ios:
@@ -699,10 +707,3 @@ include/Component.h:
 /usr/include/c++/13/bits/ostream.tcc:
 /usr/include/c++/13/istream:
 /usr/include/c++/13/bits/istream.tcc:
-include/Game.h:
-include/State.h:
-/usr/include/c++/13/stack:
-/usr/include/c++/13/deque:
-/usr/include/c++/13/bits/stl_deque.h:
-/usr/include/c++/13/bits/deque.tcc:
-/usr/include/c++/13/bits/stl_stack.h:
