@@ -15,15 +15,16 @@ public:
     Sprite(const std::string& file, int frameCountW, int frameCountH);
     ~Sprite();  // Destructor
 
-    void Open(const string& file, int frameCountW, int frameCountH);  // Load the texture from file
+    void Open(const string& file); //, int frameCountW, int frameCountH);  // Load the texture from file
     void SetClip(int x, int y, int w, int h);  // Set the clipping rectangle
     void Render(int x, int y, int w, int h);
     void SetFrame(int frame);
     void SetFrameCount(int frameCountW, int frameCountH);
     int GetWidth() const;  // Get the width of the sprite
     int GetHeight() const;  // Get the height of the sprite
-    bool IsOpen() const;  // Check if the sprite is loaded]
-
+    int GetWidthFrame();
+    int GetHeightFrame();
+    bool IsOpen() const; // Check if the sprite is loaded]
 
 private:
     SDL_Texture* texture;  // Pointer to the SDL texture

@@ -1,5 +1,6 @@
-dep/Game.d bin/Game.o: src/Game.cpp /usr/include/stdc-predef.h \
- include/Game.h include/SDL_include.h /usr/include/SDL2/SDL_image.h \
+dep/GameState.d bin/GameState.o: src/GameState.cpp \
+ /usr/include/stdc-predef.h include/GameState.h include/State.h \
+ include/SDL_include.h /usr/include/SDL2/SDL_image.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -254,8 +255,8 @@ dep/Game.d bin/Game.o: src/Game.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/functional_hash.h \
  /usr/include/c++/13/bits/hash_bytes.h \
- /usr/include/c++/13/bits/basic_string.tcc include/State.h \
- /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
+ /usr/include/c++/13/bits/basic_string.tcc /usr/include/c++/13/vector \
+ /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
  /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/memory \
@@ -293,12 +294,13 @@ dep/Game.d bin/Game.o: src/Game.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/bits/atomic_lockfree_defines.h \
  /usr/include/c++/13/backward/auto_ptr.h include/Sprite.h include/Music.h \
  include/GameObject.h include/Rect.h include/Component.h \
+ include/GameObject.h include/Zombie.h include/Game.h \
  /usr/include/c++/13/stack /usr/include/c++/13/deque \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
- /usr/include/c++/13/bits/stl_stack.h include/State.h include/MenuState.h \
- include/GameState.h include/SDL_include.h
+ /usr/include/c++/13/bits/stl_stack.h
 /usr/include/stdc-predef.h:
-include/Game.h:
+include/GameState.h:
+include/State.h:
 include/SDL_include.h:
 /usr/include/SDL2/SDL_image.h:
 /usr/include/SDL2/SDL.h:
@@ -608,7 +610,6 @@ include/SDL_include.h:
 /usr/include/c++/13/bits/functional_hash.h:
 /usr/include/c++/13/bits/hash_bytes.h:
 /usr/include/c++/13/bits/basic_string.tcc:
-include/State.h:
 /usr/include/c++/13/vector:
 /usr/include/c++/13/bits/stl_uninitialized.h:
 /usr/include/c++/13/bits/stl_vector.h:
@@ -659,12 +660,11 @@ include/Music.h:
 include/GameObject.h:
 include/Rect.h:
 include/Component.h:
+include/GameObject.h:
+include/Zombie.h:
+include/Game.h:
 /usr/include/c++/13/stack:
 /usr/include/c++/13/deque:
 /usr/include/c++/13/bits/stl_deque.h:
 /usr/include/c++/13/bits/deque.tcc:
 /usr/include/c++/13/bits/stl_stack.h:
-include/State.h:
-include/MenuState.h:
-include/GameState.h:
-include/SDL_include.h:

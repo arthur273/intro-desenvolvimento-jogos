@@ -18,8 +18,12 @@ void GameObject::Update(float dt) {
 }
 
 void GameObject::Render() {
+    SDL_Log("Render in GameObject called");
     for (auto& component : components) {
         component->Render();
+        if (component->Is("Zombie")) {
+            SDL_Log("Rendering Zombie component");
+        }
     }
 }
 

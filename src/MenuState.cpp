@@ -18,7 +18,7 @@ MenuState::~MenuState() {
 
 void MenuState::LoadAssets() {
     // Load the background sprite and music
-    bg.Open("recursos/Background.png", 0 , 0);
+    bg.Open("recursos/Background.png");
     bg.SetClip(0, 0, 1200, 900); 
     if (!bg.IsOpen()) {
         cerr << "Background sprite not loaded!" << endl;

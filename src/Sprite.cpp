@@ -11,17 +11,18 @@ Sprite::Sprite() : texture(nullptr), width(0), height(0), isOpen(false) {
 
 Sprite::Sprite(const std::string& file, int frameCountW, int frameCountH) 
     : texture(nullptr), frameCountW(frameCountW), frameCountH(frameCountH), currentFrame(0) {
-    Open(file, frameCountW, frameCountH);
+    Open(file);//, frameCountW, frameCountH);
 }
 
 Sprite::~Sprite() {
     if (texture) {
         SDL_DestroyTexture(texture); // Free the texture
     }
+    SDL_Log("Sprite about to be deleted!");
 }
 
 
-void Sprite::Open(const std::string& file, int frameCountW, int frameCountH) {
+void Sprite::Open(const std::string& file) { //, int frameCountW, int frameCountH) {
     SDL_Surface* surface = IMG_Load(file.c_str());
     cerr << "About to load image in Sprite::Open!" << IMG_GetError() << endl;
     if (!surface) {
@@ -59,13 +60,46 @@ void Sprite::Render(int x, int y, int w, int h) {
     }
 }
 
+void Sprite::SetFrame(int frame) {
+    int frameWidth = GetWidth() / frameCountW;
+    int frameHeight = GetHeight() / frameCountH;
+    
+    // Calculate the row and column of the frame in the sprite sheet
+    int currentRow = (frame / frameCountW);    // Integer division to get row
+    int currentCol = (frame % frameCountW);    // Modulo to get column
+    
+    // Set the clip rectangle to the correct portion of the sprite sheet
+    SetClip(currentCol * frameWidth,      // x position
+            currentRow * frameHeight,      // y position
+            frameWidth,                    // width of single frame
+            frameHeight);                  // height of single frame
+}
+
+void Sprite::SetFrameCount(int frameCountW, int frameCountH) {
+    this->frameCountW = frameCountW;
+    this->frameCountH = frameCountH;
+}
+
 int Sprite::GetWidth() const {
     return width; // Return the width of the sprite
 }
 
 int Sprite::GetHeight() const {
-    return height; // Return the height of the sprite
+    return height; // Return the    int frameHeight = GetHeight() / frameCountH;
 }
+
+
+int Sprite::GetWidthFrame() {
+    int frameWidth = GetWidth() / frameCountW;
+    return frameWidth; // Return the width of the sprite
+}
+
+int Sprite::GetHeightFrame() {
+    int frameHeight = GetHeight() / frameCountH;
+    return frameHeight; // Return the height of the sprite
+}
+
+
 
 bool Sprite::IsOpen() const {
     return isOpen; // Return whether the sprite is loaded

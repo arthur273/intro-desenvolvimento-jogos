@@ -2,6 +2,7 @@
 #include "Game.h"
 #include "State.h"
 #include "MenuState.h"
+#include "GameState.h"
 
 #define INCLUDE_SDL_IMAGE
 #define INCLUDE_SDL_MIXER
@@ -15,8 +16,7 @@ Game* Game::instance = nullptr;  // Define a instância única
 Game& Game::GetInstance(const std::string& title, int width, int height) {
     if (instance == nullptr) {
         instance = new Game(title, width, height);
-        State* initialState = new MenuState();
-        instance->PushState(initialState);
+        instance->PushState(new GameState());
         SDL_Log("Game Instance Created");
     }
     return *instance;
@@ -107,6 +107,7 @@ void Game::Run() {
 
         //GetCurrentState().Update(0);  // Update game state
         GetCurrentState().Render();    // Render the current state
+        GetCurrentState().Update(0);
         //SDL_Delay(33); // Limit frame rate to approximately 30 FPS
     }
     SDL_Log("Jogo acabou");

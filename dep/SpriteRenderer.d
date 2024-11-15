@@ -1,5 +1,6 @@
-dep/Game.d bin/Game.o: src/Game.cpp /usr/include/stdc-predef.h \
- include/Game.h include/SDL_include.h /usr/include/SDL2/SDL_image.h \
+dep/SpriteRenderer.d bin/SpriteRenderer.o: src/SpriteRenderer.cpp \
+ /usr/include/stdc-predef.h include/SpriteRenderer.h include/Component.h \
+ include/SDL_include.h /usr/include/SDL2/SDL_image.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
@@ -254,51 +255,15 @@ dep/Game.d bin/Game.o: src/Game.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/bits/charconv.h \
  /usr/include/c++/13/bits/functional_hash.h \
  /usr/include/c++/13/bits/hash_bytes.h \
- /usr/include/c++/13/bits/basic_string.tcc include/State.h \
+ /usr/include/c++/13/bits/basic_string.tcc include/GameObject.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/memory \
- /usr/include/c++/13/bits/stl_tempbuf.h \
- /usr/include/c++/13/bits/stl_raw_storage_iter.h \
- /usr/include/c++/13/bits/align.h /usr/include/c++/13/bit \
- /usr/include/c++/13/bits/uses_allocator.h \
- /usr/include/c++/13/bits/unique_ptr.h /usr/include/c++/13/tuple \
- /usr/include/c++/13/bits/shared_ptr.h \
- /usr/include/c++/13/bits/shared_ptr_base.h /usr/include/c++/13/typeinfo \
- /usr/include/c++/13/bits/allocated_ptr.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
- /usr/include/c++/13/ext/atomicity.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
- /usr/include/pthread.h /usr/include/sched.h \
- /usr/include/x86_64-linux-gnu/bits/sched.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \
- /usr/include/x86_64-linux-gnu/bits/cpu-set.h /usr/include/time.h \
- /usr/include/x86_64-linux-gnu/bits/time.h \
- /usr/include/x86_64-linux-gnu/bits/timex.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
- /usr/include/x86_64-linux-gnu/bits/setjmp.h \
- /usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h \
- /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h \
- /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/13/ext/concurrence.h /usr/include/c++/13/exception \
- /usr/include/c++/13/bits/exception_ptr.h \
- /usr/include/c++/13/bits/cxxabi_init_exception.h \
- /usr/include/c++/13/bits/nested_exception.h \
- /usr/include/c++/13/bits/shared_ptr_atomic.h \
- /usr/include/c++/13/bits/atomic_base.h \
- /usr/include/c++/13/bits/atomic_lockfree_defines.h \
- /usr/include/c++/13/backward/auto_ptr.h include/Sprite.h include/Music.h \
- include/GameObject.h include/Rect.h include/Component.h \
- /usr/include/c++/13/stack /usr/include/c++/13/deque \
- /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
- /usr/include/c++/13/bits/stl_stack.h include/State.h include/MenuState.h \
- include/GameState.h include/SDL_include.h
+ /usr/include/c++/13/bits/vector.tcc include/Rect.h include/Sprite.h \
+ include/GameObject.h
 /usr/include/stdc-predef.h:
-include/Game.h:
+include/SpriteRenderer.h:
+include/Component.h:
 include/SDL_include.h:
 /usr/include/SDL2/SDL_image.h:
 /usr/include/SDL2/SDL.h:
@@ -608,63 +573,12 @@ include/SDL_include.h:
 /usr/include/c++/13/bits/functional_hash.h:
 /usr/include/c++/13/bits/hash_bytes.h:
 /usr/include/c++/13/bits/basic_string.tcc:
-include/State.h:
+include/GameObject.h:
 /usr/include/c++/13/vector:
 /usr/include/c++/13/bits/stl_uninitialized.h:
 /usr/include/c++/13/bits/stl_vector.h:
 /usr/include/c++/13/bits/stl_bvector.h:
 /usr/include/c++/13/bits/vector.tcc:
-/usr/include/c++/13/memory:
-/usr/include/c++/13/bits/stl_tempbuf.h:
-/usr/include/c++/13/bits/stl_raw_storage_iter.h:
-/usr/include/c++/13/bits/align.h:
-/usr/include/c++/13/bit:
-/usr/include/c++/13/bits/uses_allocator.h:
-/usr/include/c++/13/bits/unique_ptr.h:
-/usr/include/c++/13/tuple:
-/usr/include/c++/13/bits/shared_ptr.h:
-/usr/include/c++/13/bits/shared_ptr_base.h:
-/usr/include/c++/13/typeinfo:
-/usr/include/c++/13/bits/allocated_ptr.h:
-/usr/include/c++/13/ext/aligned_buffer.h:
-/usr/include/c++/13/ext/atomicity.h:
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
-/usr/include/pthread.h:
-/usr/include/sched.h:
-/usr/include/x86_64-linux-gnu/bits/sched.h:
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-/usr/include/time.h:
-/usr/include/x86_64-linux-gnu/bits/time.h:
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
-/usr/include/x86_64-linux-gnu/bits/setjmp.h:
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
-/usr/include/x86_64-linux-gnu/c++/13/bits/atomic_word.h:
-/usr/include/x86_64-linux-gnu/sys/single_threaded.h:
-/usr/include/c++/13/ext/concurrence.h:
-/usr/include/c++/13/exception:
-/usr/include/c++/13/bits/exception_ptr.h:
-/usr/include/c++/13/bits/cxxabi_init_exception.h:
-/usr/include/c++/13/bits/nested_exception.h:
-/usr/include/c++/13/bits/shared_ptr_atomic.h:
-/usr/include/c++/13/bits/atomic_base.h:
-/usr/include/c++/13/bits/atomic_lockfree_defines.h:
-/usr/include/c++/13/backward/auto_ptr.h:
-include/Sprite.h:
-include/Music.h:
-include/GameObject.h:
 include/Rect.h:
-include/Component.h:
-/usr/include/c++/13/stack:
-/usr/include/c++/13/deque:
-/usr/include/c++/13/bits/stl_deque.h:
-/usr/include/c++/13/bits/deque.tcc:
-/usr/include/c++/13/bits/stl_stack.h:
-include/State.h:
-include/MenuState.h:
-include/GameState.h:
-include/SDL_include.h:
+include/Sprite.h:
+include/GameObject.h:
