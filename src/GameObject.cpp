@@ -20,6 +20,9 @@ void GameObject::Update(float dt) {
 void GameObject::Render() {
     SDL_Log("Render in GameObject called");
     for (auto& component : components) {
+        if (component->Is("TileMap")) {
+            SDL_Log("Rendering TileMap component");
+        }
         component->Render();
         if (component->Is("Zombie")) {
             SDL_Log("Rendering Zombie component");

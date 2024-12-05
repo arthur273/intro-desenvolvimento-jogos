@@ -18,7 +18,7 @@ Sprite::~Sprite() {
     if (texture) {
         SDL_DestroyTexture(texture); // Free the texture
     }
-    SDL_Log("Sprite about to be deleted!");
+    //SDL_Log("Sprite about to be deleted!");
 }
 
 
@@ -50,20 +50,18 @@ void Sprite::SetClip(int x, int y, int w, int h) {
 }
 
 void Sprite::Render(int x, int y, int w, int h) {
-    SDL_Log("Sprite about to render!");
+    //SDL_Log("Sprite about to render!");
     if (texture) {
         SDL_Rect destRect = {x, y, clipRect.w, clipRect.h}; // Create destination rectangle for bg
-        //SDL_Rect destRect = {x, y, w, h};
         SDL_RenderCopy(Game::GetInstance().GetRenderer(), texture, &clipRect, &destRect); // Render the texture
     } else {
         SDL_Log("Texture is null.");
     }
-}
+};
 
 void Sprite::SetFrame(int frame) {
     int frameWidth = GetWidth() / frameCountW;
     int frameHeight = GetHeight() / frameCountH;
-    
     // Calculate the row and column of the frame in the sprite sheet
     int currentRow = (frame / frameCountW);    // Integer division to get row
     int currentCol = (frame % frameCountW);    // Modulo to get column
