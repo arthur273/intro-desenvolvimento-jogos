@@ -29,10 +29,10 @@ TileSet::TileSet(int tileWidth, int tileHeight, std::string file)
 
 void TileSet::RenderTile(int index, float x, float y) {
     // Verifica se o índice é válido
+    //SDL_Log("%d", tileCount);
     if (index >= tileCount) {
         throw std::out_of_range("Índice de tile inválido");
     }
-    //SDL_Log("%d, %f, %f", index, x, y);
     // Define o frame do sprite para o tile desejado
     tileSet.SetFrame(index);
 

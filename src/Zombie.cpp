@@ -4,7 +4,8 @@
 #include "SpriteRenderer.h"
 
 
-Zombie::Zombie(GameObject& associated) : Component(associated), hitpoints(100) {
+Zombie::Zombie(GameObject& associated) : Component(associated), 
+    hitpoints(100), deathSound("recursos/Dead.wav") {
     // Create and setup the SpriteRenderer
    //auto spriteRenderer = new SpriteRenderer(associated);
     SDL_Log("Zombie Constructor Called");
@@ -21,11 +22,13 @@ Zombie::Zombie(GameObject& associated) : Component(associated), hitpoints(100) {
 
 void Zombie::Damage(int damage) {
     hitpoints -= damage;
-    if (hitpoints <= 0) {
-        // Get the SpriteRenderer component and set death frame
+    if (hitpoints == 0) {
+        // Get the SpriteRenderer component and set death "animation"
         SpriteRenderer* renderer = (SpriteRenderer*)associated.GetComponent("SpriteRenderer");
         if (renderer != nullptr) {
-            renderer->SetFrame(5);  // Death frame
+            Animator* animator = (Animator*)associated.GetComponent("Animator");
+            animator->SetAnimation("dead");
+            deathSound.Play(1); 
         }
     }
 }

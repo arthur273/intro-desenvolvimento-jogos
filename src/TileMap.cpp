@@ -4,10 +4,8 @@
 
 TileMap::TileMap(GameObject& associated, std::string file, TileSet* tileSet) 
     : Component(associated) {
-    // Converte o ponteiro para um unique_ptr
+    // ponteiro para um unique_ptr
     this->tileSet.reset(tileSet);
-    
-    // Carrega o mapa
     Load(file);
 }
 
@@ -20,7 +18,7 @@ void TileMap::Load(std::string file) {
 
     std::string line;
     
-    // Lê a primeira linha que contém as dimensões
+    // primeira linha
     std::getline(mapFile, line);
     std::stringstream dimensionsStream(line);
     

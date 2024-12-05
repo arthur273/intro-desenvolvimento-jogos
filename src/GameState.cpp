@@ -33,17 +33,30 @@ void GameState::LoadAssets() {
     SDL_Log("Map emplaced in ObjectArray in LoadAssets");
 
     // Outros objetos
-    // auto zombieObject = new GameObject();
+    auto zombieObject = new GameObject();
 
-    // // Step 2: Create the Zombie component and associate it with the GameObject
-    // auto zombie = new Zombie(*zombieObject);
+    // Step 2: Create the Zombie component and associate it with the GameObject
+    auto zombie = new Zombie(*zombieObject);
 
-    // // Step 3: Add the Zombie component to the GameObject's component list
-    // zombieObject->AddComponent(zombie);
+    // Step 3: Add the Zombie component to the GameObject's component list
+    zombieObject->AddComponent(zombie);
 
-    // // Step 4: Add the GameObject (with Zombie) to the state for rendering and updating
-    // objectArray.emplace_back(std::move(zombieObject));
+    // Step 4: Add the GameObject (with Zombie) to the state for rendering and updating
+    objectArray.emplace_back(std::move(zombieObject));
     // SDL_Log("GameState LoadAssets Called");
+
+    // zombie2 
+    auto zombieObject2 = new GameObject();
+
+    // Step 2: Create the Zombie component and associate it with the GameObject
+    auto zombie2 = new Zombie(*zombieObject2);
+
+    // Step 3: Add the Zombie component to the GameObject's component list
+    zombieObject2->AddComponent(zombie2);
+    zombieObject2->box.SetPosition(500, 500);
+
+    // Step 4: Add the GameObject (with Zombie) to the state for rendering and updating
+    objectArray.emplace_back(std::move(zombieObject2));
 }
 
 void GameState::Update(float dt) {

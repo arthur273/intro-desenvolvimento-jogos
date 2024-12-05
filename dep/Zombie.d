@@ -259,8 +259,8 @@ dep/Zombie.d bin/Zombie.o: src/Zombie.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc include/Rect.h include/Animator.h \
- include/Animation.h /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/vector.tcc include/Rect.h include/Sound.h \
+ include/Animator.h include/Animation.h /usr/include/c++/13/unordered_map \
  /usr/include/c++/13/bits/unordered_map.h \
  /usr/include/c++/13/bits/hashtable.h \
  /usr/include/c++/13/bits/hashtable_policy.h /usr/include/c++/13/tuple \
@@ -588,6 +588,7 @@ include/GameObject.h:
 /usr/include/c++/13/bits/stl_bvector.h:
 /usr/include/c++/13/bits/vector.tcc:
 include/Rect.h:
+include/Sound.h:
 include/Animator.h:
 include/Animation.h:
 /usr/include/c++/13/unordered_map:
