@@ -268,7 +268,7 @@ dep/Zombie.d bin/Zombie.o: src/Zombie.cpp /usr/include/stdc-predef.h \
  /usr/include/c++/13/ext/aligned_buffer.h \
  /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/bits/erase_if.h include/GameObject.h \
- include/SpriteRenderer.h include/Sprite.h
+ include/SpriteRenderer.h include/Sprite.h include/Resources.h
 /usr/include/stdc-predef.h:
 include/Zombie.h:
 include/Component.h:
@@ -603,3 +603,4 @@ include/Animation.h:
 include/GameObject.h:
 include/SpriteRenderer.h:
 include/Sprite.h:
+include/Resources.h:

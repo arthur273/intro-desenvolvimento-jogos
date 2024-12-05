@@ -17,8 +17,8 @@ Sprite::Sprite(const std::string& file, int frameCountW, int frameCountH)
 Sprite::~Sprite() {
     // if (texture) {
     //     SDL_DestroyTexture(texture); // Free the texture
-    // } // isso agora é lidado com a classe Resources
-    //SDL_Log("Sprite about to be deleted!");
+    // } 
+    // isso agora é lidado com a classe Resources
 }
 
 
@@ -30,22 +30,10 @@ void Sprite::Open(const std::string& file) { //, int frameCountW, int frameCount
         cerr << "Failed to load image: " << IMG_GetError() << endl;
         return;
     }
-
-
-    // texture = IMG_LoadTexture(Game::GetInstance().GetRenderer(), file.c_str());
-    // if (!texture) {
-    //     cerr << "Failed to create texture: " << SDL_GetError() << endl;
-    // } else {
-    //     if (SDL_QueryTexture(texture, NULL, NULL, &width, &height) == 0) {
-    //         //width e height agora tem os valores certos
-    //         printf("Image is loaded \n!");
-    //         isOpen = true;
-    //     } else {
-    //     printf("SDL_QueryTexture Error: %s\n", SDL_GetError());
-    //    }
-    // }
     SDL_Log("resources about to be called in Sprite Open");
     texture = Resources::GetImage(file);
+
+    // tratamento de exceção e setando width e height.
     if (texture){
         if (SDL_QueryTexture(texture, NULL, NULL, &width, &height) == 0) {
             //width e height agora tem os valores certos

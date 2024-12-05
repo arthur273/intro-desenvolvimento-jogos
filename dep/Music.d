@@ -254,7 +254,15 @@ dep/Music.d bin/Music.o: src/Music.cpp /usr/include/stdc-predef.h \
  /usr/include/SDL2/SDL_metal.h /usr/include/SDL2/SDL_power.h \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
- /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h
+ /usr/include/SDL2/SDL_locale.h /usr/include/SDL2/SDL_misc.h \
+ include/Resources.h /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h /usr/include/c++/13/tuple \
+ /usr/include/c++/13/bits/uses_allocator.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/bits/erase_if.h
 /usr/include/stdc-predef.h:
 include/Music.h:
 include/SDL_include.h:
@@ -567,3 +575,13 @@ include/SDL_include.h:
 /usr/include/SDL2/SDL_timer.h:
 /usr/include/SDL2/SDL_locale.h:
 /usr/include/SDL2/SDL_misc.h:
+include/Resources.h:
+/usr/include/c++/13/unordered_map:
+/usr/include/c++/13/bits/unordered_map.h:
+/usr/include/c++/13/bits/hashtable.h:
+/usr/include/c++/13/bits/hashtable_policy.h:
+/usr/include/c++/13/tuple:
+/usr/include/c++/13/bits/uses_allocator.h:
+/usr/include/c++/13/ext/aligned_buffer.h:
+/usr/include/c++/13/bits/enable_special_members.h:
+/usr/include/c++/13/bits/erase_if.h:

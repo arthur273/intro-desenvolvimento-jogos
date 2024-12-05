@@ -1,10 +1,12 @@
 #include "Sound.h"
 #include <iostream>
+#include <Resources.h>
 
 Sound::Sound() : chunk(nullptr), channel(-1) {}
 
 Sound::Sound(const std::string& file) : chunk(nullptr), channel(-1) {
     Open(file);
+
 }
 
 Sound::~Sound() {
@@ -45,10 +47,7 @@ void Sound::Open(const std::string& file) {
     if (chunk != nullptr) {
         Mix_FreeChunk(chunk);
     }
-
-    // Load the WAV file
-    chunk = Mix_LoadWAV(file.c_str());
-    
+    chunk = Resources::GetSound(file);
     if (chunk == nullptr) {
         std::cerr << "Failed to load sound file: " << file << std::endl;
         std::cerr << "SDL_mixer Error: " << Mix_GetError() << std::endl;
